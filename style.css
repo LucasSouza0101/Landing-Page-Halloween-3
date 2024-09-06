@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    136.16deg,
+    rgba(46, 9, 22, 0.97) 12.91%,
+    rgba(32, 10, 43, 0.69) 141.68%
+  );
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 31px;
+  margin-bottom: 120px;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: rgba(255, 91, 121, 1);
+  text-decoration: none;
+  position: relative;
+}
+
+.underline:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0px;
+  position: absolute;
+  background-color: rgba(255, 91, 121, 1);
+  transition: 0.3s ease;
+}
+
+.underline:hover:after {
+  width: 100%;
+}
+
+.button-link {
+  border: 1px solid #ff5b79;
+  border-radius: 41px;
+  padding: 10px 20px 10px 20px;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+}
+
+.nav-link:active {
+  opacity: 0.7;
+}
+
+.button-link:hover {
+  opacity: 0.9;
+}
+
+.button-link:active {
+  opacity: 0.7;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px 170px;
+}
+
+.container-left {
+  width: 50%;
+
+  img {
+    width: 450px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+
+    animation: moveGhost 2s infinite alternate ease-in-out;
+  }
+}
+
+.left-texts {
+  margin-right: 390px;
+  padding-right: 20px;
+  border-right: 2px solid #ff5b79;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 77px;
+  display: flex;
+  justify-content: end;
+}
+
+.left-texts p:first-child {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.left-texts p:last-child {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.p-left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 30px;
+}
+
+.p-left::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5b79;
+  right: -27px;
+  top: -77px;
+  position: relative;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ff5b79;
+}
+
+.right-texts p:first-child {
+  font-weight: 900;
+  font-size: 68px;
+  line-height: 74px;
+  color: #ffffff;
+  margin: 33px 0px;
+  width: 445px;
+}
+
+.right-texts p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  width: 445px;
+}
+
+.right-actions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    background: none;
+    border: none;
+    background-image: url(./assets/red-button.svg);
+    padding: 29.5px 43px;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  button:active {
+    opacity: 0.7;
+  }
+
+  a:hover {
+    opacity: 0.9;
+  }
+
+  a:active {
+    opacity: 0.7;
+  }
+}
+
+.ghost-button {
+  display: block;
+  margin: 12px auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-image: url(./assets/hollow-button.svg);
+  padding: 33.7px 40.56px;
+  margin-top: 100px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.ghost-button:hover {
+  opacity: 0.9;
+}
+
+.ghost-button:active {
+  opacity: 0.7;
+}
+
+@keyframes moveGhost {
+  from {
+    transform: translate(0, -6%);
+  }
+
+  to {
+    transform: translate(0, 5%);
+  }
+}
+
+@media (max-width: 1480px) {
+  .p-left {
+    width: 174px;
+  }
+
+  .left-texts {
+    margin-right: 274px;
+  }
+}
+
+@media (max-width: 1390px) {
+  .container-left img {
+    margin-left: -81px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .container-left img {
+    margin-left: -106px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .left-texts {
+    margin-right: 246px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .left-texts {
+    margin-right: 230px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .left-texts {
+    margin-right: 216px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .left-texts {
+    margin-right: 194px;
+  }
+}
+@media (max-width: 1100px) {
+  section {
+    flex-direction: column;
+  }
+
+  .container-left {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 100px;
+
+    img {
+      margin: auto;
+    }
+
+    .left-texts {
+      display: none;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+  }
+
+  .right-texts p:first-child {
+    text-align: center;
+    font-size: 87px;
+    width: auto;
+    line-height: 85px;
+  }
+
+  .right-texts p:last-child {
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    width: auto;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1069px) {
+  section {
+    padding: 0px 95px;
+  }
+
+  h1 {
+    line-height: 53px;
+  }
+}
+
+@media (max-width: 830px) {
+  header {
+    img {
+      width: 35%;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .container-left img {
+    width: 90%;
+  }
+
+  .right-texts p:first-child {
+    font-size: 68px;
+    line-height: 68px;
+  }
+
+  .right-actions {
+    flex-direction: column;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    line-height: 32px;
+    font-size: 30px;
+  }
+
+  .right-texts p:first-child {
+    font-size: 56px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 340px) {
+  h1 {
+    line-height: 32px;
+    font-size: 30px;
+  }
+
+  .right-texts p:first-child {
+    font-size: 38px;
+    line-height: 36px;
+  }
+
+  .left-texts p:first-child {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 250px) {
+  .container-left img {
+    width: 150%;
+  }
+}
